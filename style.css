@@ -1,0 +1,466 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-family: 'R-regular';
+    font-weight: 300;
+    text-align: center;
+    color: #434343;
+    justify-content: center;
+}
+.grid {
+    height: 100vh;
+    margin: 0 auto;
+    /*max-width: 85%;*/
+    width: 100%;
+}
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+   /*border: 1px solid red;*/
+}
+img{
+    display: block;    
+}
+.menu{
+  
+    border-top: #6564a7 solid 2px;
+    height: 9vh;
+}
+.menu_item{
+    width: 21.5%;
+    align-self: center;
+    font-size: 2vh;
+    font-family: "R-extrabold";
+    letter-spacing: 2px;
+}
+.menu_item:hover{
+    color: #6564a7;   
+}
+.menu_item:active{
+    color: #6564a7;   
+}
+.menu_item.active{
+    color: #6564a7;   
+}
+
+.menu_brain{
+    width: 3.75%;
+    align-self: center;
+    height: 9vh;
+    display: flex;
+    border-top: #6564a7 solid 0.7vh;
+}
+
+.menu_brain img{
+    width: 3.1vw;
+   margin: auto;
+}
+.menu_icon{
+    align-self: center;
+}
+.menu_icon img{
+    width: 2.8vw;
+}
+
+.arrows{
+    display: flex;
+    width: 100%;
+    height: 11vh;
+}
+.arrow_item{
+    width: 21.5vw;
+}
+.arrow_brain{
+    width: 3.75%;
+}
+.arrow_down{
+    display: none;
+    width: 0; 
+    height: 0; 
+    border-left: 0.7vw solid transparent;
+    border-right: 0.7vw solid transparent;
+    border-top: 0.7vw solid white;
+    margin: auto;
+  }
+.main_left{
+    width: 5%;
+    background: linear-gradient(to bottom, rgb(193, 193, 193) 0%, rgba(232,232,232,1) 0%, rgb(220, 220, 220) 0%, rgb(241, 240, 240) 4%, rgb(197, 197, 197) 100%);
+}
+.main_right{
+    width: 5%;
+    background: linear-gradient(to bottom, rgb(193, 193, 193) 0%, rgba(232,232,232,1) 0%, rgb(220, 220, 220) 0%, rgb(241, 240, 240) 4%, rgb(197, 197, 197) 100%);
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height:91vh;
+    background: linear-gradient(to bottom, rgb(193, 193, 193) 0%, rgba(232,232,232,1) 0%, rgb(220, 220, 220) 0%, rgb(241, 240, 240) 4%, rgb(197, 197, 197) 100%);
+}
+.main_items{
+    display: flex;
+    flex-shrink: 0;
+    float: left;
+    width: 100%;
+    overflow-x: scroll;
+}
+.main_items::-webkit-scrollbar{
+    height: 0px;
+}
+.main_item{
+    width: 21%;
+    /*height: 60vh;*/
+    margin-right: 4%;
+    flex-shrink: 0;
+    -webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+}
+.main_header{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vh;
+    color: black;
+}
+.main_header_top{
+    height: 5vh;
+}
+.main_title{
+    text-align: start;
+    font-size: 4vh;
+    letter-spacing: 0.6vw;
+    align-self: center;
+    font-family: "R-regular";
+}
+.main_newq{
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+.newq_icon{
+    align-self: center;
+    margin: 0 0.6vw;
+}
+.newq_text{
+    align-self: center;
+    display: flex;
+    font-size: 1.2vh;
+    letter-spacing: 0.3vw;
+}
+
+.text_regular{
+    font-family: "R-medium";
+}
+.text_bold{
+    font-family: "R-extrabold";
+    margin-left: 1vw;
+}
+.main_newq img{
+    width:2.2vw;
+}
+.main_counter{
+    text-align: left;
+    align-items: flex-end;
+    font-size: 0.6vw;
+    letter-spacing: 0.15vw;
+    font-family: "R-medium";
+    height: 5vh;
+    padding-bottom: 2px;
+}
+.main_footer{
+    height: 10vh;
+}
+
+.item_header{
+    background-color: #6565a5;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+}
+.header_text{
+    margin-left: 1.8vw;
+    text-align: left;
+    align-self: center;
+    color: white;
+    width: 100%;
+
+}
+.item_header_title{
+    color: white;
+    font-size: 0.9vw;
+    letter-spacing: 0.2vw;
+    font-family: "R-medium";
+    margin: 0.5vh 0;
+}
+.item_header_date{
+    font-size: 0.6vw;
+    letter-spacing: 0.2vw;
+    font-family: "R-regular";
+}
+.item_questions{
+    width: 100%;
+    height:43vh;
+    
+    overflow-y: scroll;
+}
+.item_questions_contener{
+    padding-right:2%; 
+    background-color: #333333;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+}
+.item_questions::-webkit-scrollbar{
+    width: 5px;
+    
+}
+.item_questions::-webkit-scrollbar-thumb{
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    height: 10px;
+}
+.question{
+    margin-left: 1.8vw;
+    text-align: left;
+}
+.question_number{
+    color: #757575;
+    font-size: 0.7vw; 
+    font-family: "R-medium";
+}
+.question_text{
+    color: #bcbcbc;
+    font-size: 0.7vw;
+    letter-spacing: 0.1vw;
+    line-height: 1vw;
+    font-family: "R-medium";
+    padding-top:1.5vh;
+    padding-bottom: 3vh;
+}
+
+.item_footer{
+    display: flex;
+    height: 5vh;
+    background-color: white;
+    font-size: 0.7vw;
+    font-family: "R-extrabold";
+    letter-spacing: 0.1vw;
+}
+.item_footer img{
+    width: 1.2vw;
+}
+.item_footer_start{
+    justify-content: flex-end;
+}
+.start_icon{
+    margin: 0 1.3vw;
+}
+.start_icon img{
+    width: 1.7vw;
+}
+.edit_icon{
+    margin: 0 1.3vw;
+}
+[class*="item_footer_"]{
+    display: flex;
+    width: 50%;
+}
+[class*="start_"]{
+   align-self: center;
+   color: #6564a7;
+}
+[class*="edit_"]{
+    align-self: center;
+    color: black;
+}
+.main_footer_link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    letter-spacing: 0.2vw;
+    color: black;
+    font-size: 1vw;
+}
+ /* The Overlay (background) */
+ .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (min-width:421px) and (max-width:1900px){
+    .menu_icon{
+        width: 5%;
+    }
+}
+@media screen and (max-width:420px){
+    .menu{
+        justify-content: flex-end;
+    }
+    .menu_item{
+        display: none;
+    }
+    .menu_brain{
+        display: none;
+    }
+    .menu_icon img{
+        width: 15vw;
+    }
+    .main_item{
+        width: 100%;
+        height: 71vh;
+        margin-right: 10%;
+    }
+    .arrows{
+        display:none;
+    }
+    .main_header{
+        height: 12vh;
+    }
+    .main_header_top{
+        height: 10vh;
+    }
+    .header_text{
+        margin-left: 7vw;
+    }
+    .item_header{
+        height: 8vh;
+    }
+    .item_header_title{
+        font-size: 5vw;
+        letter-spacing: 0.4vw;
+    }
+    .item_header_date{
+        font-size: 2.5vw;
+        letter-spacing: 0.8vw;
+    }
+    .main_counter{
+        height: 2vh;
+        font-size: 3vw;
+    }
+    .main_title{
+        font-size: 7vw;
+        width: 70%;
+    }
+    .main_newq{
+        width: 30%;
+    }
+    .newq_text{
+        font-size: 3vw;
+    }
+    .main_newq img{
+        width:7vw;
+    }
+    .item_questions_contener{
+        height: 56vh;
+    }
+    .item_questions{
+        height: 50vh;
+    }
+    .item_footer{
+        height: 7vh;
+    }
+    .question{
+        margin-left: 7vw;
+    }
+    .question_number{
+        font-size: 3vw;
+        font-family: "R-extrabold";
+        letter-spacing: 0.3vw;
+    }
+    .question_text{
+        font-size: 4vw;
+        line-height: 3vh;
+    }
+    .item_footer img{
+        width: 8vw;
+    }
+    .edit_icon{
+        margin: 0 7vw;
+    }
+    .start_icon{
+        margin: 0 7vw;
+    }
+    .edit_text{
+        font-size: 4vw;
+    }
+    .start_text{
+        font-size: 4vw;
+    }
+    .main_footer{
+        height: 6vh;
+    }
+    .main_footer_link{
+        font-size: 4vw;
+    }
+
+     
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+
+}
