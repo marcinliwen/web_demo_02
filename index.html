@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,6 @@
     <script type="text/javascript" src="app.js"></script>
 </head>
 <style>
-
 </style>
 <body>
         <!-- The overlay -->
@@ -21,10 +21,10 @@
       
         <!-- Overlay content -->
         <div class="overlay-content">
-          <a onclick="showme(event, 'questy'); closeNav()">QUESTY</a>
-          <a onclick="showme(event, 'sessions'); closeNav()">SESSIONS</a>
-          <a onclick="showme(event, 'users') ; closeNav()">USERS</a>
-          <a onclick="showme(event, 'settings'); closeNav()">SETTINGS</a>
+          <a onclick="showme(event, 'questy'); closeNav(); colormenu(0)" >QUESTY</a>
+          <a onclick="showme(event, 'sessions'); closeNav(); colormenu(1)">SESSIONS</a>
+          <a onclick="showme(event, 'users') ; closeNav(); colormenu(2)">USERS</a>
+          <a onclick="showme(event, 'settings'); closeNav(); colormenu(3)">SETTINGS</a>
         </div>
       
 </div>
@@ -844,15 +844,12 @@
     <script>
     
     document.getElementById("onloadactive").click();
-
         var itemAmount = document.getElementsByClassName("main_item").length;
     function countItem(){
         
         document.getElementById("main_item_counter").innerHTML = itemAmount + " TOTAL";
     };
     countItem();
-
-
     WebFont.load({
         google: {
         families: ['Raleway']

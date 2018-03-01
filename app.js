@@ -25,3 +25,11 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
+
+
+function colormenu(n){
+    for (i = 0; i < menu.length; i++) {
+        menu[i].className = menu[i].className.replace(" active", "");
+    }
+    menu[n].className += " active";
+}

@@ -458,7 +458,13 @@ img{
     .main_footer_link{
         font-size: 4vw;
     }
-
+    .menu_item.active{
+        color: #6564a7;
+        display: block;
+        position: absolute;
+        left: 5%;
+        font-size: 20px;
+    }
      
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 
