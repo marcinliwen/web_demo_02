@@ -454,11 +454,12 @@ z-index: 5;
         display:none;
     }
     .main_items{
-        
-top: 14%;
+        top: 13%;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
     }
     .main_item{
-        width: 90%;
+        width: 95%;
         height: 70vh;
         margin-right: 10%;
     }
