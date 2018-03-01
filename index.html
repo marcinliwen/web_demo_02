@@ -28,6 +28,9 @@
         </div>
       
 </div>
+<!--arrows for slider-->
+<i class="arrow right" onclick="scrollQuestions('right')"></i>
+<i class="arrow left" onclick="scrollQuestions('left')"></i>
     <div class="grid">
         <div class="menu row">
             <div class="menu_icon"></div>
@@ -70,6 +73,7 @@
                     </div> 
                 </div>
                 <div class="main_items">
+                <div id="moveme">
                     <div  class="main_item">
                         <div class="item_header">
                             <div class="header_text">
@@ -826,7 +830,7 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
                     
                 </div>
                 <div class="main_footer row">
@@ -856,7 +860,11 @@
         }
     });
     
-    
+    function scrollQuestions(direction){
+    if (direction ==='left'){
+        document.getElementById('moveme').style.transform = "translateX(-10px)";
+    }
+}
     </script>
 </body>
 </html>

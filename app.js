@@ -33,3 +33,11 @@ function colormenu(n){
     }
     menu[n].className += " active";
 }
+
+var contener = document.getElementById("moveme");
+
+function scrollQuestions(direction){
+    if (direction ==='left'){
+        contener.style.transform = "translateX(-10px)";
+    }
+}

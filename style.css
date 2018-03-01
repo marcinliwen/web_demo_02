@@ -16,6 +16,10 @@ body, html{
     color: #434343;
     justify-content: center;
 }
+#moveme{
+    display:flex;
+    width: 100%;
+}
 .grid {
     height: 100vh;
     margin: 0 auto;
@@ -92,6 +96,10 @@ img{
     display: flex;
     width: 100%;
     height: 11vh;
+    margin: 0 5%;
+    position:  absolute;
+    width:  90%;
+    top: 9%;
 }
 .arrow_item{
     width: 21.5vw;
@@ -110,18 +118,32 @@ img{
   }
 .main_left{
     width: 5%;
-    background: linear-gradient(to bottom, rgb(193, 193, 193) 0%, rgba(232,232,232,1) 0%, rgb(220, 220, 220) 0%, rgb(241, 240, 240) 4%, rgb(197, 197, 197) 100%);
+    height: 91%;
+    position: fixed;
+    top: 9vh;
+    left: 0;
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(241, 238, 238) 0%, rgba(230, 230, 230, 0.71) 42%, rgba(228, 228, 228, 0.05) 100%);
+    z-index: 4;
 }
 .main_right{
     width: 5%;
-    background: linear-gradient(to bottom, rgb(193, 193, 193) 0%, rgba(232,232,232,1) 0%, rgb(220, 220, 220) 0%, rgb(241, 240, 240) 4%, rgb(197, 197, 197) 100%);
+    height: 91%;
+    position: fixed;
+    top: 9vh;
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.98) 0%, rgb(255, 255, 255) 0%, rgba(241, 238, 238, 1) 0%, rgba(230, 230, 230, 0.71) 42%, rgba(251, 250, 250, 0.05) 100%);
+    z-index: 4;
+    /* width: 5%; */
+    /* background: linear-gradient(to bottom, rgb(193, 193, 193) 0%, rgba(232,232,232,1) 0%, rgb(220, 220, 220) 0%, rgb(241, 240, 240) 4%, rgb(197, 197, 197) 100%); */
 }
 .main{
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     height:91vh;
     background: linear-gradient(to bottom, rgb(193, 193, 193) 0%, rgba(232,232,232,1) 0%, rgb(220, 220, 220) 0%, rgb(241, 240, 240) 4%, rgb(197, 197, 197) 100%);
+    /* overflow-x: overlay; */
 }
 .main_items{
     display: flex;
@@ -129,27 +151,39 @@ img{
     float: left;
     width: 100%;
     overflow-x: scroll;
+    /* margin:  0 5%; */
+    position:  absolute;
+    top: 28%;
+    z-index: 2;
+    padding-left: 5%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 .main_items::-webkit-scrollbar{
     height: 0px;
 }
 .main_item{
-    width: 21%;
-    /*height: 60vh;*/
+    width: 20%;
+    height: 60vh;
     margin-right: 4%;
     flex-shrink: 0;
     -webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 15px -3px rgba(0,0,0,0.75);
 }
 .main_header{
     display: flex;
     flex-wrap: wrap;
-    height: 10vh;
+    height: 9vh;
     color: black;
+    margin: 0 5%;
+    position:  absolute;
+    width:  90%;
+    top: 20%;
+    z-index:  0;
 }
 .main_header_top{
-    height: 5vh;
+    height: 4vh;
 }
 .main_title{
     text-align: start;
@@ -186,7 +220,7 @@ img{
 }
 .main_counter{
     text-align: left;
-    align-items: flex-end;
+    align-items: center;
     font-size: 0.6vw;
     letter-spacing: 0.15vw;
     font-family: "R-medium";
@@ -195,6 +229,11 @@ img{
 }
 .main_footer{
     height: 10vh;
+    margin: 0 5%;
+    position:  absolute;
+    width:  90%;
+    top: 90%;
+    z-index: 0;
 }
 
 .item_header{
@@ -224,13 +263,12 @@ img{
     font-family: "R-regular";
 }
 .item_questions{
-    width: 100%;
+    /* width: 95%; */
     height:43vh;
-    
     overflow-y: scroll;
 }
 .item_questions_contener{
-    padding-right:2%; 
+    padding-right:2%;
     background-color: #333333;
     padding-top: 3vh;
     padding-bottom: 2vh;
@@ -308,7 +346,7 @@ img{
 }
  /* The Overlay (background) */
  .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 0;
     width: 100%;
     position: fixed; /* Stay in place */
@@ -319,6 +357,7 @@ img{
     background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    z-index:  10;
 }
 
 /* Position the content inside the overlay */
@@ -352,13 +391,50 @@ img{
     right: 45px;
     font-size: 60px;
 }
+/******arrows for slider******/
+i {
+    border-radius: -62px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    top: 63%;
+    padding: 16px;
+    margin-top: -50px;
+    z-index: 5;
+}
 
-@media screen and (min-width:421px) and (max-width:1900px){
+.right {
+    right: 2%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    
+left: 2%;
+    
+transform: rotate(135deg);
+    
+-webkit-transform: rotate(135deg);
+    
+z-index: 5;
+}
+
+
+@media screen and (min-width:421px){
     .menu_icon{
         width: 5%;
     }
 }
 @media screen and (max-width:420px){
+    *{
+        position:relative;
+        /* top: 0; */
+    }
     .menu{
         justify-content: flex-end;
     }
@@ -371,9 +447,19 @@ img{
     .menu_icon img{
         width: 15vw;
     }
+    .main_left{
+        display:none;
+    }
+    .main_right{
+        display:none;
+    }
+    .main_items{
+        
+top: 14%;
+    }
     .main_item{
-        width: 100%;
-        height: 71vh;
+        width: 90%;
+        height: 70vh;
         margin-right: 10%;
     }
     .arrows{
@@ -381,6 +467,8 @@ img{
     }
     .main_header{
         height: 12vh;
+        /* position:  relative; */
+        top: 0;
     }
     .main_header_top{
         height: 10vh;
@@ -417,7 +505,8 @@ img{
         width:7vw;
     }
     .item_questions_contener{
-        height: 56vh;
+        /* height: 56vh; */
+        /* width: 95%; */
     }
     .item_questions{
         height: 50vh;
@@ -454,6 +543,7 @@ img{
     }
     .main_footer{
         height: 6vh;
+        top: 92%;
     }
     .main_footer_link{
         font-size: 4vw;
@@ -467,6 +557,8 @@ img{
     }
      
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-
+    i{
+        display:none;
+    }
 
 }
