@@ -34,10 +34,46 @@ function colormenu(n){
     menu[n].className += " active";
 }
 
-var contener = document.getElementById("moveme");
+/********scroll*******
+var button = document.getElementById('slide');
+button.onclick = function () {
+    var container = document.getElementById('moveme');
+    sideScroll(container,'right',10,500,10);
+};
 
-function scrollQuestions(direction){
-    if (direction ==='left'){
-        contener.style.transform = "translateX(-10px)";
-    }
+var back = document.getElementById('slideBack');
+back.onclick = function () {
+    var container = document.getElementById('moveme');
+    sideScroll(container,'left',10,500,10);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
 }
+******/
+
+var distance = document.getElementsByTagName("body")[0].offsetWidth;
+var mainItemWidth =((24*distance)/100);
+
+var button = document.getElementById('slide');
+button.onclick = function () {
+    var container = document.getElementById('moveme');
+    container.scrollBy({ top: 0, left: mainItemWidth, behavior: 'smooth' });
+};
+
+var back = document.getElementById('slideBack');
+back.onclick = function () {
+    var container = document.getElementById('moveme');
+    container.scrollBy({ top: 0, left: -mainItemWidth, behavior: 'smooth' });
+};
